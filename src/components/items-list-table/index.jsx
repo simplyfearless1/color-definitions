@@ -1,34 +1,43 @@
-const ItemsListTable = () => {
-    return (
-        <div className="w-full">
-        <table className="shadow-lg table-auto w-full">
-          <thead>
-            <tr className="text-left">
-              <th>Song</th>
-              <th>Artist</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-              <td>Malcolm Lockyer</td>
-              <td>1961</td>
-            </tr>
-            <tr>
-              <td>Witchy Woman</td>
-              <td>The Eagles</td>
-              <td>1972</td>
-            </tr>
-            <tr>
-              <td>Shining Star</td>
-              <td>Earth, Wind, and Fire</td>
-              <td>1975</td>
-            </tr>
-          </tbody>
+const ItemsListTable = ({ items }) => {
 
-        </table>
-      </div>
-    )
+  return (
+    <div className="max-w-7xl w-full mt-8 bg-white rounded-md p-8 shadow-lg">
+      <table className="table-auto w-full">
+        <thead>
+          <tr>
+            <th>Color name</th>
+            <th>Color hex</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items && items.length > 0 && items.map((item, index) => {
+            return (
+              <tr key={index} className="text-center">
+                <td>
+                  {item.title}
+                </td>
+                <td>
+                  {item.hex}
+                </td>
+                <td>
+                  <button>
+                    <span className="text-4xl material-symbols-outlined">
+                    edit_document
+                    </span>
+                  </button>
+                  <button>
+                    <span className="material-symbols-outlined">
+                    delete
+                    </span>
+                  </button>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </div>
+  )
 }
 export default ItemsListTable
