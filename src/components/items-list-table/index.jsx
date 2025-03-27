@@ -5,9 +5,9 @@ const ItemsListTable = ({ items }) => {
       <table className="table-auto w-full">
         <thead>
           <tr>
-            <th>Color name</th>
-            <th>Color hex</th>
-            <th>Action</th>
+            <th className="w-1/3">Color name</th>
+            <th className="w-1/3">Color hex</th>
+            <th className="w-1/3">Action</th>
           </tr>
         </thead>
         <tbody>
