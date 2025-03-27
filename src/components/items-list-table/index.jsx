@@ -4,7 +4,7 @@ const ItemsListTable = ({ items }) => {
     <div className="max-w-7xl w-full mt-8 bg-white rounded-md p-8 shadow-lg">
       <table className="table-auto w-full">
         <thead>
-          <tr>
+          <tr className="text-blue-600">
             <th className="w-1/3">Color name</th>
             <th className="w-1/3">Color hex</th>
             <th className="w-1/3">Action</th>
