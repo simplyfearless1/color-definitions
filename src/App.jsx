@@ -1,10 +1,14 @@
+import ItemsListTable from "./components/items-list-table"
+import PageTitle from "./components/page-title"
+
 function App() {
 
   return (
     <>
-      <h1>
-        Hello there
-      </h1>
+      <div className="flex flex-col justify-center items-center">
+        <PageTitle />
+        <ItemsListTable />
+      </div>
     </>
   )
 }
