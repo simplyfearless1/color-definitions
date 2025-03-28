@@ -4,11 +4,18 @@ import ItemRemoveModal from "../../components/item-remove-modal"
 
 const ItemsListTable = ({ items }) => {
 
+  const [id, setId] = useState(0)
   const [isEditModalVisible, setisEdiTModalVisible] = useState(false)
   const [isRemoveModalVisible, setisRemoveTModalVisible] = useState(false)
-  const handleItemEditClick = () => setisEdiTModalVisible(true)
+  const handleItemEditClick = (id) => {
+    setId(id)
+    setisEdiTModalVisible(true)
+  }
   const handleItemEditClose = () => setisEdiTModalVisible(false)
-  const handleItemRemoveClick = () => setisRemoveTModalVisible(true)
+  const handleItemRemoveClick = (id) => { 
+    setId(id)
+    setisRemoveTModalVisible(true) 
+  }
   const handleItemRemoveClose = () => setisRemoveTModalVisible(false)
 
   return (
@@ -23,7 +30,7 @@ const ItemsListTable = ({ items }) => {
             </tr>
           </thead>
           <tbody>
-            {items && items.length > 0 && items.map((item, index) => {
+            {items?.length > 0 && items.map((item, index) => {
               return (
                 <tr key={index} className="text-center">
                   <td>
@@ -33,12 +40,12 @@ const ItemsListTable = ({ items }) => {
                     {item.hex}
                   </td>
                   <td>
-                    <button onClick={handleItemEditClick}>
+                    <button onClick={() => handleItemEditClick(item.id)}>
                       <span className="text-4xl material-symbols-outlined">
                         edit_document
                       </span>
                     </button>
-                    <button onClick={handleItemRemoveClick}>
+                    <button onClick={() => handleItemRemoveClick(item.id)}>
                       <span className="material-symbols-outlined">
                         delete
                       </span>
@@ -50,8 +57,8 @@ const ItemsListTable = ({ items }) => {
           </tbody>
         </table>
       </div>
-      <ItemEditModal visible={isEditModalVisible} onClose={handleItemEditClose} onSubmit={handleItemEditClose} />
-      <ItemRemoveModal visible={isRemoveModalVisible} onClose={handleItemRemoveClose} onSubmit={handleItemRemoveClose} />
+      <ItemEditModal visible={isEditModalVisible} onClose={handleItemEditClose} onSubmit={handleItemEditClose} id={id} />
+      <ItemRemoveModal visible={isRemoveModalVisible} onClose={handleItemRemoveClose} onSubmit={handleItemRemoveClose} id={id} />
     </>
   )
 }
