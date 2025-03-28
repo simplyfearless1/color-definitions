@@ -1,8 +1,6 @@
 import Input from '../input'
 
-const ItemEditModal = ({ visible, onClose, onSubmit }) => {
-
-    const id = 0
+const ItemEditModal = ({ visible, onClose, onSubmit, id }) => {
 
     return (
         <>

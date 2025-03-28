@@ -1,9 +1,4 @@
-import Input from '../input'
-
-const ItemRemoveModal = ({ visible, onClose, onSubmit }) => {
-
-    const id = 0
-
+const ItemRemoveModal = ({ visible, onClose, onSubmit, id }) => {
     return (
         <>
             {visible && (
