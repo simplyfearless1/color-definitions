@@ -23,4 +23,10 @@ export const request = (
         .catch((err) => onError && onError(err))
         .finally(() => onFinally && onFinally())
     }
+    if(type === 'delete') {
+        axios.delete(reqUrl, {...params})
+        .then((res) => onSuccess && onSuccess(res))
+        .catch((err) => onError && onError(err))
+        .finally(() => onFinally && onFinally())
+    }
 }
