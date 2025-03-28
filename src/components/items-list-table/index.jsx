@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ItemEditModal from "../../components/item-edit-modal"
 import ItemRemoveModal from "../../components/item-remove-modal"
 
