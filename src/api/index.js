@@ -17,4 +17,10 @@ export const request = (
             .catch((err) => onError && onError(err))
             .finally(() => onFinally && onFinally())
     }
+    if(type === 'patch') {
+        axios.patch(reqUrl, {...params})
+        .then((res) => onSuccess && onSuccess(res))
+        .catch((err) => onError && onError(err))
+        .finally(() => onFinally && onFinally())
+    }
 }

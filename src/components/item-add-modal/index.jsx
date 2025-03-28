@@ -59,10 +59,10 @@ const ItemAddModal = ({ visible, onClose, onSubmit }) => {
                                                 <p className="text-sm text-gray-500">Create a new color definition</p>
                                             </div>
                                             <div className="w-full mt-3">
-                                                <Input id='color_name' label='Color name' name='color_name' placeholder='White' handleChange={handleInputChange} />
+                                                <Input id='color_name' label='Color name' name='color_name' placeholder='White' handleChange={handleInputChange} value={formData.color_name} />
                                             </div>
                                             <div className="w-full mt-3">
-                                                <Input id='color_hex' label='Color hex' name='color_hex' placeholder='#ffffff' handleChange={handleInputChange} />
+                                                <Input id='color_hex' label='Color hex' name='color_hex' placeholder='#ffffff' handleChange={handleInputChange} value={formData.color_hex} />
                                             </div>                                            
                                         </div>
                                     </div>
