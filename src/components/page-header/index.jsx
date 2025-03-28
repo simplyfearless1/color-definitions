@@ -1,7 +1,7 @@
-import ItemAddModal from "../../components/item-add-modal"
+import ItemAddModal from "../item-add-modal"
 import { useState } from "react"
 
-const PageTitle = () => {
+const PageHeader = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const handleClick = () => setIsModalOpen(true)
     const handleClose = () => setIsModalOpen(false)
@@ -26,4 +26,4 @@ const PageTitle = () => {
         </>
     )
 }
-export default PageTitle
+export default PageHeader
