@@ -1,7 +1,7 @@
 {
     "colors": [
         { "id": "1", "title": "White", "hex": "#ffffff" },
-        { "id": "1", "title": "Black", "hex": "#000000" },
-        { "id": "1", "title": "Grey", "hex": "#222222" }
+        { "id": "2", "title": "Black", "hex": "#000000" },
+        { "id": "3", "title": "Grey", "hex": "#222222" }
     ]
 }
