@@ -2,8 +2,6 @@ import Input from '../input'
 
 const ItemAddModal = ({ visible, onClose, onSubmit }) => {
 
-    const id = 0
-
     return (
         <>
             {visible && (
@@ -15,7 +13,7 @@ const ItemAddModal = ({ visible, onClose, onSubmit }) => {
                                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                     <div class="w-full">
                                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                                            <h3 class="text-base font-semibold text-gray-900" id="modal-title">Add Color Definition{id}</h3>
+                                            <h3 class="text-base font-semibold text-gray-900" id="modal-title">Add Color Definition</h3>
                                             <div class="mt-2">
                                                 <p class="text-sm text-gray-500">Create a new color definition</p>
                                             </div>
