@@ -3,6 +3,7 @@ import Input from '@/components/input'
 import { request } from '@/api'
 import { API_ENDPOINTS } from '@/config/api'
 import Modal from '@/components/modal'
+import Button from '@/components/button'
 
 const ItemEditModal = ({ visible, onClose, onSubmit, id }) => {
     const formDataDefaultValue = {
@@ -95,11 +96,11 @@ const ItemEditModal = ({ visible, onClose, onSubmit, id }) => {
                         </div>
                     </div>
                     <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                        <button type="button" className="inline-flex w-full justify-center rounded-md bg-orange-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-orange-500 sm:ml-3 sm:w-auto" onClick={() => {
+                        <Button classes='bg-orange-500 text-white hover:bg-orange-600' handleClick={() => {
                             handleFormSubmit()
                             onSubmit()
-                        }}>Save changes</button>
-                        <button type="button" className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto" onClick={onClose}>Cancel</button>
+                        }}>Save changes</Button>
+                        <Button classes='ring-1 ring-gray-300 bg-white text-gray-900 ring-inset hover:bg-gray-50' handleClick={onClose}>Cancel</Button>
                     </div>
                 </Modal>
             )}
