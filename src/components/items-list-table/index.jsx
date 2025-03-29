@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import ItemEditModal from "../../components/item-edit-modal"
 import ItemRemoveModal from "../../components/item-remove-modal"
+import Spinner from '../spinner'
 
-const ItemsListTable = ({ items }) => {
+const ItemsListTable = ({ items, loading }) => {
 
   const [id, setId] = useState(0)
   const [isEditModalVisible, setisEdiTModalVisible] = useState(false)
@@ -20,7 +21,12 @@ const ItemsListTable = ({ items }) => {
 
   return (
     <>
-      <div className="max-w-7xl w-full mt-8 bg-white rounded-md p-8 shadow-lg">
+      {loading ? (
+        <div className='mt-8'>
+          <Spinner />
+        </div>
+      ) : (
+        <div className="max-w-7xl w-full mt-8 bg-white rounded-md p-8 shadow-lg">
         <table className="table-auto w-full">
           <thead>
             <tr className="text-blue-600">
@@ -57,6 +63,7 @@ const ItemsListTable = ({ items }) => {
           </tbody>
         </table>
       </div>
+      )}
       <ItemEditModal visible={isEditModalVisible} onClose={handleItemEditClose} onSubmit={handleItemEditClose} id={id} />
       <ItemRemoveModal visible={isRemoveModalVisible} onClose={handleItemRemoveClose} onSubmit={handleItemRemoveClose} id={id} />
     </>

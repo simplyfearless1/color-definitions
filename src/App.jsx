@@ -4,13 +4,13 @@ import PageHeader from "./components/page-header"
 import { ColorDefinitionsContext } from './context/colors'
 
 const App = () => {
-  const { colorDefinitions } = useContext(ColorDefinitionsContext)
+  const { colorDefinitions, loading } = useContext(ColorDefinitionsContext)
 
   return (
     <>
       <div className="flex flex-col justify-center items-center">
         <PageHeader />
-        <ItemsListTable items={colorDefinitions} />
+        <ItemsListTable items={colorDefinitions} loading={loading} />
       </div>
     </>
   )
