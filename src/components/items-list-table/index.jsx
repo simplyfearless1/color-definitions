@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
-import ItemEditModal from "../../components/item-edit-modal"
-import ItemRemoveModal from "../../components/item-remove-modal"
-import Spinner from '../spinner'
-import Input from '../input'
-import { ColorDefinitionsContext } from '../../context/colors'
+import ItemEditModal from '@/components/item-edit-modal'
+import ItemRemoveModal from '@/components/item-remove-modal'
+import Spinner from '@/components/spinner'
+import Input from '@/components/input'
+import { ColorDefinitionsContext } from '@/context/colors'
 
 const ItemsListTable = () => {
   const { colorDefinitions, loading } = useContext(ColorDefinitionsContext)

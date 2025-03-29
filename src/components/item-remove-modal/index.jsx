@@ -1,5 +1,5 @@
-import { request } from '../../api'
-import { API_ENDPOINTS } from '../../config/api'
+import { request } from '@/api'
+import { API_ENDPOINTS } from '@/config/api'
 
 const ItemRemoveModal = ({ visible, onClose, onSubmit, id }) => {
     const handleDataSuccess = async (res) => {

@@ -1,5 +1,5 @@
-import ItemAddModal from "../item-add-modal"
-import { useState } from "react"
+import ItemAddModal from '@/components/item-add-modal'
+import { useState } from 'react'
 
 const PageHeader = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)

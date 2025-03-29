@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import Input from '../input'
-import { request } from '../../api'
-import { API_ENDPOINTS } from '../../config/api'
+import Input from '@/components/input'
+import { request } from '@/api'
+import { API_ENDPOINTS } from '@/config/api'
 
 const ItemEditModal = ({ visible, onClose, onSubmit, id }) => {
     const formDataDefaultValue = {
