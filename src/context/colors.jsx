@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { request } from '../api';
-import { API_ENDPOINTS } from '../config/api';
+import { request } from '@/api';
+import { API_ENDPOINTS } from '@/config/api';
 
 export const ColorDefinitionsContext = createContext()
 

@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
-import ItemEditModal from "../../components/item-edit-modal"
-import ItemRemoveModal from "../../components/item-remove-modal"
-import Spinner from '../spinner'
-import Input from '../input'
-import { ColorDefinitionsContext } from '../../context/colors'
+import ItemEditModal from '@/components/item-edit-modal'
+import ItemRemoveModal from '@/components/item-remove-modal'
+import Spinner from '@/components/spinner'
+import Input from '@/components/input'
+import { ColorDefinitionsContext } from '@/context/colors'
+import Button from '@/components/button'
 
 const ItemsListTable = () => {
   const { colorDefinitions, loading } = useContext(ColorDefinitionsContext)
@@ -93,16 +94,16 @@ const ItemsListTable = () => {
                         {item.hex}
                       </td>
                       <td>
-                        <button onClick={() => handleItemEditClick(item.id)}>
+                        <Button handleClick={() => handleItemEditClick(item.id)}>
                           <span className="text-4xl material-symbols-outlined">
                             edit_document
                           </span>
-                        </button>
-                        <button onClick={() => handleItemRemoveClick(item.id)}>
+                        </Button>
+                        <Button handleClick={() => handleItemRemoveClick(item.id)}>
                           <span className="material-symbols-outlined">
                             delete
                           </span>
-                        </button>
+                        </Button>
                       </td>
                     </tr>
                   )

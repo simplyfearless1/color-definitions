@@ -1,5 +1,6 @@
-import ItemAddModal from "../item-add-modal"
-import { useState } from "react"
+import ItemAddModal from '@/components/item-add-modal'
+import { useState } from 'react'
+import Button from '@/components/button'
 
 const PageHeader = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -15,12 +16,12 @@ const PageHeader = () => {
                 <p className="mb-2">
                     Below is a list of color definitions. You may remove or add existing color definitions. These changes use then stored in the state and use a mock API call for demonstrative purposes.
                 </p>
-                <button type="button" className="inline-flex w-full justify-center items-center rounded-md bg-orange-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-orange-500 sm:ml-3 sm:w-auto" onClick={handleClick}>
+                <Button classes='bg-orange-500 text-white hover:bg-orange-600 justify-center items-center' handleClick={handleClick}>
                     <span className="text-4xl material-symbols-outlined pr-1">
                         add_circle
                     </span>
                     Add Color definition
-                </button>
+                </Button>
             </div>
             <ItemAddModal visible={isModalOpen} onClose={handleClose} onSubmit={handleClose} />
         </>

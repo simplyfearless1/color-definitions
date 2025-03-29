@@ -1,5 +1,5 @@
-import ItemsListTable from "./components/items-list-table"
-import PageHeader from "./components/page-header"
+import ItemsListTable from "@/components/items-list-table"
+import PageHeader from '@/components/page-header'
 
 const App = () => {
   return (
